@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/pizzaImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="Pizza Image"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pizzaName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/detailsButton"
+        app:layout_constraintStart_toEndOf="@id/pizzaImage"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="SPINACH PIZZA" />
+
+    <ImageView
+        android:id="@+id/personIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="Person count"
+        android:src="@android:drawable/ic_menu_myplaces"
+        app:layout_constraintStart_toEndOf="@id/pizzaImage"
+        app:layout_constraintTop_toBottomOf="@id/pizzaName" />
+
+    <TextView
+        android:id="@+id/personCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/personIcon"
+        app:layout_constraintStart_toEndOf="@id/personIcon"
+        app:layout_constraintTop_toTopOf="@id/personIcon"
+        tools:text="2" />
+
+    <ImageView
+        android:id="@+id/timeIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="Time required"
+        android:src="@android:drawable/ic_menu_recent_history"
+        app:layout_constraintStart_toEndOf="@id/pizzaImage"
+        app:layout_constraintTop_toBottomOf="@id/personIcon" />
+
+    <TextView
+        android:id="@+id/timeRequired"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/timeIcon"
+        app:layout_constraintStart_toEndOf="@id/timeIcon"
+        app:layout_constraintTop_toTopOf="@id/timeIcon"
+        tools:text="25 min" />
+
+    <ImageView
+        android:id="@+id/detailsButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="Show details"
+        android:padding="8dp"
+        android:src="@android:drawable/ic_menu_info_details"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
